@@ -5,7 +5,7 @@ public class MinCostToCutStick
         Array.Sort(cuts);
         int m = cuts.Length;
         int[,] dp = new int[m + 2, m + 2];        
-        for (int l = 2; l <= m + 1; l++) //we need to ends to cut the stick, hence start from 2.
+        for (int l = 2; l <= m + 1; l++) //we need two ends to cut the stick, hence start from 2.
         {
             for (int i = 0; l + i <= m + 1; i++) //j = 0, i.e Start of the stick.
             {

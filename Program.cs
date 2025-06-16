@@ -74,8 +74,8 @@ root.right.right = new TreeNode(9);
 // invertBinaryTree.Run();
 
 // Anagram anagram = new Anagram();
-// // anagram.IsAnagram('anagram','nagaram');
-// anagram.IsAnagram('rat','car');
+// anagram.IsAnagram("anagram","nagarm");
+// anagram.IsAnagram("rat","car");
 
 // BinarySearch binarySearch = new BinarySearch();
 // binarySearch.Search(new int[] {1,6,8,9}, 5);
@@ -254,6 +254,10 @@ root.right.right = new TreeNode(9);
 
 // PartitionEqualSubsetSum partitionEqualSubsetSum = new PartitionEqualSubsetSum();
 // partitionEqualSubsetSum.CanPartition(new int [] {1,5,11,5});
+// partitionEqualSubsetSum.CanPartition(new int [] {1,2,3,5});
+
+// partitionEqualSubsetSum.CanPartition2(new int [] {1,5,11,5});
+// partitionEqualSubsetSum.CanPartition2(new int [] {1,2,3,5});
 
 // StringToInteger stringToInteger = new StringToInteger();
 // var ress = stringToInteger.Atoi(' -042');
@@ -328,9 +332,9 @@ root.right.right = new TreeNode(9);
 // GasStation gasStation = new GasStation();
 // gasStation.CanCompleteCircuit(new int[] {1,2,3,4,5}, new int [] {3,4,5,1,2});
 
-NextPermutations nextPermutations = new NextPermutations();
-nextPermutations.NextPermutation(new int[] {4,3,2,5,4,3,1});
-nextPermutations.NextPermutation(new int[] {4,3,2,1});
+// NextPermutations nextPermutations = new NextPermutations();
+// nextPermutations.NextPermutation(new int[] {4,3,2,5,4,3,1});
+// nextPermutations.NextPermutation(new int[] {4,3,2,1});
 
 // ValidSudoku validSudoku = new ValidSudoku();
 // validSudoku.IsValidSudoku(new char[][]{['5','3','.','.','7','.','.','.','.']
@@ -478,8 +482,8 @@ listNode21.next.next = new ListNode(9);
 // maximalSquares.MaximalSquare(new char[][]{['1','0','1','0','0'],['1','0','1','1','1'],['1','1','1','1','1'],['1','0','0','1','0']});
 
 // RotateImage rotateImage = new RotateImage();
-// //rotateImage.Rotate90(new int[][]{[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]});
-// //rotateImage.Rotate90V2(new int[][]{[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]});
+// rotateImage.Rotate90(new int[][]{[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]});
+// rotateImage.Rotate90V2(new int[][]{[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]});
 // rotateImage.Rotate180(new int[][]{[1,2,3],[4,5,6],[7,8,9]});
 
 TreeNode treerr = new TreeNode(15);
@@ -658,9 +662,9 @@ Solution407 solution407 = new Solution407();
 // longestIncreasingPathInMatrix.LongestIncreasingPath(new int[][] {[9,9,4],[6,6,8],[2,1,1]});
 
 // LongestValidParenthesiss longestValidParenthesiss = new LongestValidParenthesiss();
-// //var res = longestValidParenthesiss.LongestValidParentheses(")()())");
-// // var res = longestValidParenthesiss.LongestValidParentheses("(()((())");
-// var res = longestValidParenthesiss.LongestValidParenthesesDP("(()(((()))");
+// var res = longestValidParenthesiss.LongestValidParentheses(")()())");
+// var res1 = longestValidParenthesiss.LongestValidParentheses("(()((())");
+// var res2 = longestValidParenthesiss.LongestValidParenthesesDP("(()(((()))");
 // res = longestValidParenthesiss.LongestValidParentheses("");
 
 //     BiContest137 biContest137 = new BiContest137();
@@ -771,4 +775,38 @@ Solution407 solution407 = new Solution407();
 // PascalsTriangle pascalsTriangle = new PascalsTriangle();
 // pascalsTriangle.Generate(5);
 
-int rees = 0;
+// MaximumPossibleNumberByBinaryConcatenation maximumPossibleNumberByBinaryConcatenation = new MaximumPossibleNumberByBinaryConcatenation();
+// int ereerr = maximumPossibleNumberByBinaryConcatenation.MaxGoodNumber(new int[] {1, 2, 3});
+
+// RemoveMethodsFromProject removeMethodsFromProject = new RemoveMethodsFromProject();
+// // // removeMethodsFromProject.RemainingMethods(4,1,new int[][] {[1,2],[0,1],[3,2]});
+// removeMethodsFromProject.RemainingMethods(3,2,new int[][] {[1,0],[2,0]});
+
+// ConstructGrid constructGrid = new ConstructGrid();
+// // constructGrid.ConstructGridLayout(4, new int[][]{[0,1],[0,2],[1,3],[2,3]});
+// constructGrid.ConstructGridLayout(5, new int[][]{[0,1],[1,3],[2,3],[2,4]});
+
+// SubStringWithKFrequency subStringWithKFrequency = new ();
+// int res = subStringWithKFrequency.NumberOfSubstrings("abacb", 2);
+
+// MinDivisionOperations minDivisionOperations = new MinDivisionOperations();
+// int res = minDivisionOperations.MinOperations(new int [] {9,10,18,20,2});
+
+// Contest421 contest421 = new Contest421();
+// // contest421.LengthAfterTransformations("abcyy", 2);
+// contest421.MaxScore(new int[] {2,4,8,16});
+
+// Epam interviewQuestion = new Epam();
+// interviewQuestion.ThirdLargestInteger(new int [] {1,2,5,9,8,9,9,7});
+// interviewQuestion.ThirdLargestInteger(new int [] {1,2,5,9});
+
+// Cognizant cognizant = new Cognizant();
+// _ = cognizant.GetLongestSubstringLength("", "");
+// _ = cognizant.GetLongestSubstringLength("abc", "c");
+// _ = cognizant.GetLongestSubstringLength("abcdef", "bcdefr");
+
+CodingTestMethods.GetDistinctRandom();
+
+// Program2.Main2();
+//PracticeMS practiceMS = new();
+// var ugduw = practiceMS.MinCostClimbingStairs(new int[] {1,100,1,1,1,100,1,1,100,1});

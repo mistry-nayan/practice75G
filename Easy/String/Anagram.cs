@@ -1,4 +1,5 @@
 public class Anagram {
+    
     public bool IsAnagram(string s, string t) {
         int[] freq = new int[26];
         foreach (char c in s){
@@ -43,4 +44,17 @@ public class Anagram {
 
         // return !isAnagram;
     }
+
+
+    // public void SortArray(){
+    //     int[] ints = new int[]{-1, 2, -7, 1, -5, 9, 4};
+
+    //     int index = 3;
+
+    //     for (int i = 1; i < ints.Length; i++)
+    //     {
+    //         var temp = ints[i -1];
+    //         ints[i] = 
+    //     }        
+    // }
 }

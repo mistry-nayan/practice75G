@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 public class LongPalindrome {
     public int LongestPalindrome(string s) {
         s = Regex.Replace(s,"[^a-zA-z]","");
-        Console.WriteLine(s.Length);
+        Console.WriteLine(s.Length); 
         if(s.Length == 1) return 1;
         int[] letterArray = new int[52];
         

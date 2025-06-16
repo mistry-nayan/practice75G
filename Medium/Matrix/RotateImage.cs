@@ -7,24 +7,26 @@ public class RotateImage
             return;
         }  
         int rows = matrix.Length, cols = matrix[0].Length; 
-        for (int I = 0; I < rows / 2; I++)
+        for (int I = 0; I < rows / 2; I++) //runs the layers, hence we take row /2;
         {
-            for (int II = I; II < rows - I - 1; II++)
+            //cols since n * n matrix, rows == cols
+            for (int J = I; J < rows - I - 1; J++) //access the components for that layer
             {
                 //top element
-                int temp = matrix[I][II];
+                int temp = matrix[I][J];
 
                 //move left to top
-                matrix[I][II] = matrix[rows - II - 1][I];
+                //total cols - current col - 1(since we are taking length)
+                matrix[I][J] = matrix[rows - J - 1][I];
 
                 //move bottom to left
-                matrix[rows - II - 1][I] = matrix[rows - I - 1][rows - II - 1];
+                matrix[rows - J - 1][I] = matrix[rows - I - 1][rows - J - 1];
 
                 //move right to bottom
-                matrix[rows - I - 1][rows - II - 1] = matrix[II][rows - I - 1];
+                matrix[rows - I - 1][rows - J - 1] = matrix[J][rows - I - 1];
 
                 // Assign temp to right
-                matrix[II][rows - I - 1] = temp;
+                matrix[J][rows - I - 1] = temp;
             }
         }
         var res = "";
