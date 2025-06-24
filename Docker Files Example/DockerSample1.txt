@@ -1,0 +1,83 @@
+﻿# Example : Deploying .NET WEB API & React client on same appservice using container.
+
+# Stage 1: Build React App
+FROM node:20 AS client-build
+WORKDIR /app/client
+COPY ClientApp/ ./         # Replace [ClientApp] with your actual React project folder name
+RUN npm install
+RUN npm run build          # Vite output goes to /app/client/dist by default, Ensure Vite is configured for production
+
+# Stage 2: Build .NET API
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+WORKDIR /src/Api			# Replace [Api] with your actual .NET Web API folder name
+RUN dotnet restore
+RUN dotnet publish -c Release -o /app/publish
+
+# Stage 3: Final Image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+
+# Copy API output
+COPY --from=build /app/publish .
+
+# Copy frontend static files to 'wwwroot'
+COPY --from=client-build /app/client/dist ./wwwroot
+
+# Serve static files via ASP.NET
+ENV ASPNETCORE_URLS=http://+:80
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "Api.dll"]  # Replace [Api.dll] with your actual DLL name (matches project)
+
+
+
+
+# Example if your folders are:
+# React: ClientApp
+# Web API project: MyApp.Api
+# DLL: MyApp.Api.dll
+
+
+
+# to test locally, 
+
+# 1. Build the Docker image:
+# docker build -t fullstack-app .
+
+# This will:
+
+# Build your React app using Node
+
+# Publish your .NET API
+
+# Copy React build (dist/) to wwwroot/
+
+
+#2. Run the container:
+# docker run -p 8080:80 fullstack-app
+# This maps container port 80 → host port 8080
+
+
+# 3. Open browser:
+# http://localhost:8080
+#
+#Your API endpoints will also be available, e.g.
+#http://localhost:8080/api/your-controller
+#
+#
+# When do you need HTTPS inside the container?
+# 
+# Only if:
+# You're hosting on your own VM or server
+# You need end-to-end HTTPS (e.g., container → internal services)
+# 
+# Then you’d:
+# Add certificates
+# Configure Kestrel in Program.cs
+# Bind https://+:443
+# Expose port 443 in Dockerfile
+#
+#
+#
