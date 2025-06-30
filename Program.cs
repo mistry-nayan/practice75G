@@ -805,8 +805,9 @@ Solution407 solution407 = new Solution407();
 // _ = cognizant.GetLongestSubstringLength("abc", "c");
 // _ = cognizant.GetLongestSubstringLength("abcdef", "bcdefr");
 
-CodingTestMethods.GetDistinctRandom();
+//CodingTestMethods.GetDistinctRandom();
 
 // Program2.Main2();
 //PracticeMS practiceMS = new();
 // var ugduw = practiceMS.MinCostClimbingStairs(new int[] {1,100,1,1,1,100,1,1,100,1});
+
