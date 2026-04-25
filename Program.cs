@@ -5,6 +5,28 @@ using System.Net.WebSockets;
 
 Console.WriteLine("Hello, World!");
 
+NextSpecialString1 nextSpecialString = new NextSpecialString1();
+nextSpecialString.GetNextSpecialString("abbd");
+nextSpecialString.GetNextSpecialString("abc");
+nextSpecialString.GetNextSpecialString("abcz");
+nextSpecialString.GetNextSpecialString("zzz");
+nextSpecialString.GetNextSpecialString("a");
+nextSpecialString.GetNextSpecialString("z");
+nextSpecialString.GetNextSpecialString("abb");
+nextSpecialString.GetNextSpecialString("aabb");
+nextSpecialString.GetNextSpecialString("aaaa");
+nextSpecialString.GetNextSpecialString("azaz");
+
+
+// FindMinimumMachinesSize findMinimumMachinesSize = new FindMinimumMachinesSize();
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {1,2,3,4,5});
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {1,2,2,1,1});
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {1,5,1,5,1});
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {3,3,3,3});
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {1,2,3,2,2,1});
+// findMinimumMachinesSize.FindMinimumMachines(new int [] {1,3,3,3,1});
+
+
 TreeNode lvl30 = new TreeNode(8);
 TreeNode lvl31 = new TreeNode(9);
 TreeNode lvl32 = new TreeNode(10);
