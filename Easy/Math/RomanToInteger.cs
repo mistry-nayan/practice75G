@@ -9,28 +9,28 @@ public class RomanToInteger {
         charValue.Add('D',500);
         charValue.Add('M',1000);
         int res = 0;
-        for (int I = 0; I < s.Length; I++)
+        for (int i = 0; i < s.Length; i++)
         {
-            if((s[I] == 'V' || s[I] == 'X') && I - 1 >= 0){
-                if(s[I - 1] == 'I'){
-                    res += charValue[s[I]] - 2;
+            if((s[i] == 'V' || s[i] == 'X') && i - 1 >= 0){
+                if(s[i - 1] == 'I'){
+                    res += charValue[s[i]] - 2;
                     continue;
                 }
             }
-            else if((s[I] == 'L' || s[I] == 'C') && I - 1 >= 0){
-                if(s[I - 1] == 'X'){
-                    res += charValue[s[I]] - 20;
+            else if((s[i] == 'L' || s[i] == 'C') && i - 1 >= 0){
+                if(s[i - 1] == 'X'){
+                    res += charValue[s[i]] - 20;
                     continue;
                 } 
             }
-            else if((s[I] == 'D' || s[I] == 'M') && I - 1 >= 0){
-                if(s[I-1] == 'C'){
-                    res += charValue[s[I]] - 200;
+            else if((s[i] == 'D' || s[i] == 'M') && i - 1 >= 0){
+                if(s[i-1] == 'C'){
+                    res += charValue[s[i]] - 200;
                     continue;
                 }
             }
             
-            res += charValue[s[I]];
+            res += charValue[s[i]];
         }
         return res;
     }

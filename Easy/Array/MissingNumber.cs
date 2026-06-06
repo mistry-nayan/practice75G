@@ -21,4 +21,18 @@ public class MissingNumbers
     
 	    return x;
     }
+
+    
+    public int MissingNumber2(int[] nums)
+    {
+        int x = nums.Length;
+        int tot = x;
+        int sum = 0;
+	    for (int i = 0; i < x; i++)
+	    {
+            tot += i;
+            sum += nums[i];
+	    }
+	    return tot - sum;
+    }
 }
