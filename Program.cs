@@ -5,17 +5,19 @@ using System.Net.WebSockets;
 
 Console.WriteLine("Hello, World!");
 
-NextSpecialString1 nextSpecialString = new NextSpecialString1();
-nextSpecialString.GetNextSpecialString("abbd");
-nextSpecialString.GetNextSpecialString("abc");
-nextSpecialString.GetNextSpecialString("abcz");
-nextSpecialString.GetNextSpecialString("zzz");
-nextSpecialString.GetNextSpecialString("a");
-nextSpecialString.GetNextSpecialString("z");
-nextSpecialString.GetNextSpecialString("abb");
-nextSpecialString.GetNextSpecialString("aabb");
-nextSpecialString.GetNextSpecialString("aaaa");
-nextSpecialString.GetNextSpecialString("azaz");
+GetMinimumConflict.MainA(null);
+
+// NextSpecialString1 nextSpecialString = new NextSpecialString1();
+// nextSpecialString.GetNextSpecialString("abbd");
+// nextSpecialString.GetNextSpecialString("abc");
+// nextSpecialString.GetNextSpecialString("abcz");
+// nextSpecialString.GetNextSpecialString("zzz");
+// nextSpecialString.GetNextSpecialString("a");
+// nextSpecialString.GetNextSpecialString("z");
+// nextSpecialString.GetNextSpecialString("abb");
+// nextSpecialString.GetNextSpecialString("aabb");
+// nextSpecialString.GetNextSpecialString("aaaa");
+// nextSpecialString.GetNextSpecialString("azaz");
 
 
 // FindMinimumMachinesSize findMinimumMachinesSize = new FindMinimumMachinesSize();

@@ -4,24 +4,30 @@ public class BinarySearch
 {
     public int Search(int[] nums, int target) { 
      
-    int lo = 0;
-    int hi = nums.Length - 1;
-       return binarySearch(lo, hi, nums, target);       
-    // while (lo <= hi)
-    // {
-    //     int mid = lo + (hi - lo) / 2;
-            
-    //     if (nums[mid] == target)
-    //         return mid;
-            
-    //     if (nums[mid] > target)
-    //         hi = mid - 1;
-    //     else
-    //         lo = mid + 1;
-    // }
-        
-    // return -1;
+        int low = 0;
+        int high = nums.Length - 1;
+
+        while(low <= high)
+        {
+            int mid = low + (high - low) /2;
+            if(nums[mid] == target)
+            {
+                Console.WriteLine(mid);
+                return mid;
+            }
+            else if(nums[mid] > target)
+            {
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
+        }
+
+        return -1;
     }
+
 
     public int binarySearch(int left, int right, int[] nums, int target) {
 

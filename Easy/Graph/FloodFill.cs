@@ -9,6 +9,8 @@ public class FloodFil {
     }
 
     public void Traverse(int[][] image, int i, int j, int value, int color){
+        // first check the bounds of image,
+        // then check if the current pixel is of the same color as the original color. If not, return.
         if (i >= image.Length || i < 0 || j >= image[0].Length || j < 0 || 
             image[i][j] != value)
             return;
